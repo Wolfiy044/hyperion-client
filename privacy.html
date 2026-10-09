@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy - Hyperion Client</title>
+  <title>Privacy - Hyperion Client</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,40 +16,34 @@
     </nav>
   </header>
   <main class="doc">
-    <h1>Privacy Policy</h1>
-    <p class="muted">Applies to the Hyperion Client launcher for Windows.</p>
+    <h1>Privacy</h1>
+    <p>This page explains what Hyperion Client does with your data. The short version is that almost everything stays on your own computer.</p>
 
-    <h2>What the launcher stores on your computer</h2>
-    <p>Profiles, settings, downloaded game files, logs and screenshots stay on your computer in your user folder.
-      They are not uploaded to us.</p>
+    <h2>On your computer</h2>
+    <p>Your profiles, settings, downloaded game files, logs and screenshots are stored in your Windows user folder. They are not
+      uploaded anywhere. If you delete the launcher folder, all of it is gone.</p>
 
-    <h2>Microsoft sign-in</h2>
-    <p>To verify that you own Minecraft, Hyperion Client uses the official Microsoft, Xbox and Minecraft sign-in flow.
-      You enter your password only on Microsoft pages, never inside Hyperion Client.
-      The sign-in tokens are stored on your computer and are used only to start your game and to check ownership.
-      We do not receive or store your Microsoft password or tokens on any server of ours.</p>
+    <h2>Microsoft login</h2>
+    <p>To check that you own Minecraft, the launcher uses the official Microsoft, Xbox and Minecraft sign-in. You type your
+      password on a Microsoft page, never inside Hyperion Client. The tokens you get back are kept on your computer and are only
+      used to confirm ownership and to start the game. I do not run a server that receives or stores them.</p>
 
-    <h2>Network requests</h2>
-    <ul>
-      <li>Mojang, Fabric, Quilt, Forge and NeoForge servers: game versions, game files and mod loaders.</li>
-      <li>Modrinth: searching and downloading packs and content, and checking for updates by file hash.</li>
-      <li>CurseForge: searches and file lookups go through our proxy server, which adds the API key so that it never
-        ships inside the launcher. The proxy forwards the request and does not store your profile data.
-        Like most web servers it may keep short-lived technical logs such as IP address and time for abuse protection.</li>
-    </ul>
+    <h2>Other connections</h2>
+    <p>The launcher talks to Mojang, Fabric, Quilt, Forge and NeoForge to download game files and loaders, and to Modrinth to
+      search for and download content. CurseForge searches go through a small server of mine, because CurseForge requires an API
+      key and I do not want to ship that key inside the app. That server only passes your search or file request on to CurseForge.
+      Like most web servers it may keep technical logs for a short time, for example your IP address and the time of the request,
+      to protect against abuse.</p>
 
-    <h2>No sale of data</h2>
-    <p>We do not sell personal data and we do not use advertising or tracking services in the launcher.</p>
+    <h2>Selling and tracking</h2>
+    <p>I do not sell any data and there is no advertising or analytics in the launcher.</p>
 
-    <h2>Your choices</h2>
-    <p>You can sign out and delete profiles at any time. Uninstalling the launcher and deleting its folder in your
-      user profile removes all locally stored data.</p>
-
-    <h2>Contact</h2>
-    <p>Questions about this policy: <a href="https://github.com/Wolfiy044/hyperion-client/issues">open an issue</a>.</p>
+    <h2>Questions</h2>
+    <p>If you want to know more or have a request about your data, open an issue on
+      <a href="https://github.com/Wolfiy044/hyperion-client/issues">GitHub</a>.</p>
   </main>
   <footer>
-    <p>Hyperion Client is an independent project and is not an official Minecraft product.</p>
+    <p>Hyperion Client is an independent project and has nothing to do with Mojang or Microsoft.</p>
   </footer>
 </body>
 </html>
