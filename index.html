@@ -19,62 +19,43 @@
   </header>
   <main class="doc">
     <h1>Hyperion Client</h1>
-    <p>Manage Minecraft: Java Edition profiles and modpacks, connect with friends and browse community servers
-      in one Windows launcher. Hyperion Client is free and has no in-app purchases.</p>
-    <div class="grid">
-      <article class="card">
-        <h2>Profiles and content</h2>
-        <p>Create separate game folders with their own memory settings, Java options and icons.
-          Import Modrinth and CurseForge packs or instances from other launchers. Browse mods, manage updates,
-          repair profiles, read logs and manage screenshots.</p>
-      </article>
-      <article class="card">
-        <h2>Friends and parties</h2>
-        <p>Send friend requests, chat, form parties and share invitations or modpacks.
-          Groups, community chat and scheduled game nights keep people together.</p>
-      </article>
-      <article class="card">
-        <h2>Privacy and moderation</h2>
-        <p>Control presence, hide your server address, limit requests and block users.
-          Report messages, review moderation notices and submit appeals in the launcher.</p>
-      </article>
-      <article class="card">
-        <h2>Community servers</h2>
-        <p>Browse published servers, check their status and install associated server profiles.
-          Server owners manage listings, packs and rules through the Hyperion portal.</p>
-      </article>
-      <article class="card">
-        <h2>Launcher settings</h2>
-        <p>Configure startup, the intro, closing to the tray and behavior after launching a game.
-          Profile performance tools include load timings, backups and configurable JVM tuning.</p>
-      </article>
-    </div>
-    <h2>Game starts and compatibility</h2>
-    <p>Microsoft sign-in uses official authentication and checks Minecraft ownership. Your password is entered
-      on Microsoft's page. When signed out of Hyperion, a game start opens the separately installed official
-      Minecraft Launcher with its independent account session.</p>
-    <p>The current build requires Windows 10 version 1809 or later and the .NET 8 Desktop Runtime.
-      Internet access is needed for downloads and online features. Minecraft requirements depend on the
-      selected version and modpack.</p>
-    <p>Vanilla, Fabric, Forge, NeoForge and Quilt profiles use versions supported by each loader.
-      Not every loader exists for every Minecraft version; universal compatibility is not promised.</p>
-    <h2>Protected server sessions</h2>
-    <p>Servers can set Hyperion Anti-cheat to off, optional or required. A protected session starts a separate
-      native user-mode process after consent and Windows administrator permission. It checks profile content
-      and Minecraft process integrity and reports findings to Hyperion for server admission checks.
-      No custom kernel driver or Windows service is installed.</p>
-    <p>The current implementation may delete resource or shader packs from the selected profile that it
-      identifies as x-ray packs. Declining permission or failing required checks prevents the protected start.
-      Unprotected profiles do not activate the guard. These checks do not guarantee a cheat-free server.
-      See <a href="privacy.html">Privacy</a> for the information processed.</p>
-    <h2>In-game UI is paused</h2>
-    <p>The native in-game client mod is temporarily disabled. Its controls are hidden, it is not installed
-      or included in exported modpacks, and no active loader/version support is offered for it.
-      Friends, chat and parties remain available in the launcher.</p>
-    <h2>Availability</h2>
-    <p>The project is in development. A Microsoft Store submission is being prepared, but it has not been
-      published there. No public download is currently offered here. Minecraft is a separate product;
-      a valid Java Edition license is required to play.</p>
+    <p>I started Hyperion because I play different Minecraft modpacks and wanted to keep them in one place.
+      Each profile has its own game folder and settings, so changing one pack does not get in the way of another.
+      You can bring over an existing instance or install a pack from Modrinth or CurseForge, then manage its
+      mods and updates inside the launcher. Logs and screenshots stay with the profile they belong to.</p>
+    <p>Hyperion has also grown into a way to play together. You can talk to friends before opening Minecraft,
+      make a party and invite them to your server or modpack. Groups and community chat give those conversations
+      somewhere to stay, and game nights help arrange the next session. You decide whether your presence and
+      server address are visible. Blocking, reporting and moderation appeals are available when needed.</p>
+    <p>The server page shows published communities and their status. If a server has a pack, you can install
+      its profile from there. Owners manage their listings and rules through the Hyperion portal. The launcher
+      can stay in the tray while you play; its settings let you change startup behavior and skip the intro.
+      Profile tools provide backups and load timings to help when a pack needs attention.</p>
+    <p>The in-game client mod is on hold for now. Hyperion does not install it or include it in exported packs,
+      and its switches are hidden. Chat and parties still work in the launcher. There is no current in-game mod
+      compatibility offer.</p>
+
+    <h2>Before you play</h2>
+    <p>Hyperion is a free Windows launcher, with no in-app purchases. You still need to own Minecraft:
+      Java Edition. Signing in opens Microsoft's normal login and checks your Minecraft license; your password
+      is entered on Microsoft's page. If you are signed out of Hyperion, starting a profile opens the separately
+      installed official Minecraft Launcher, which uses its own account.</p>
+    <p>The current build needs Windows 10 version 1809 or newer and the .NET 8 Desktop Runtime.
+      Downloads and online features need an internet connection. The game itself may need more memory or
+      different hardware depending on the pack. Fabric, Forge, NeoForge and Quilt are available where those
+      loaders support the chosen Minecraft version, rather than for every version.</p>
+    <p>Hyperion is still in development. The Microsoft Store submission is being prepared, but the app has
+      not been published there. There is no public download on this website yet.</p>
+
+    <h2>A note about anti-cheat</h2>
+    <p>Some servers enable Hyperion Anti-cheat or require it to join. For those sessions, Hyperion asks for
+      your consent and Windows administrator permission before starting a separate native user-mode process.
+      It checks the selected profile and the Minecraft process, then sends findings to Hyperion's backend
+      so the server can check admission. It does not install a custom kernel driver or Windows service.</p>
+    <p>The current guard can delete resource or shader packs from that profile if it identifies them as x-ray
+      packs. If you decline permission or a required check fails, the protected start is blocked. Ordinary
+      unprotected profiles do not run the guard. Anti-cheat cannot guarantee that a server is free of cheating.
+      The <a href="privacy.html">privacy notice</a> explains what information is processed.</p>
   </main>
   <footer>
     <p>Hyperion Client is an independent project and has nothing to do with Mojang or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
