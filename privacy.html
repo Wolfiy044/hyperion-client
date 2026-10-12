@@ -9,38 +9,76 @@
 <body>
   <header>
     <a class="brand" href="./">HYPERION <span>CLIENT</span></a>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="./">Home</a>
-      <a href="privacy.html">Privacy</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
   </header>
   <main class="doc">
     <h1>Privacy</h1>
-    <p>This page explains what Hyperion Client does with your data. The short version is that almost everything stays on your own computer.</p>
-
-    <h2>On your computer</h2>
-    <p>Your profiles, settings, downloaded game files, logs and screenshots are stored in your Windows user folder. They are not
-      uploaded anywhere. If you delete the launcher folder, all of it is gone.</p>
-
-    <h2>Microsoft login</h2>
-    <p>To check that you own Minecraft, the launcher uses the official Microsoft, Xbox and Minecraft sign-in. You type your
-      password on a Microsoft page, never inside Hyperion Client. The tokens you get back are kept on your computer and are only
-      used to confirm ownership and to start the game. I do not run a server that receives or stores them.</p>
-
-    <h2>Other connections</h2>
-    <p>The launcher talks to Mojang, Fabric, Quilt, Forge and NeoForge to download game files and loaders, and to Modrinth to
-      search for and download content. CurseForge searches go through a small server of mine, because CurseForge requires an API
-      key and I do not want to ship that key inside the app. That server only passes your search or file request on to CurseForge.
-      Like most web servers it may keep technical logs for a short time, for example your IP address and the time of the request,
-      to protect against abuse.</p>
-
-    <h2>Selling and tracking</h2>
-    <p>I do not sell any data and there is no advertising or analytics in the launcher.</p>
-
-    <h2>Questions</h2>
-    <p>If you want to know more or have a request about your data, open an issue on
-      <a href="https://github.com/Wolfiy044/hyperion-client/issues">GitHub</a>.</p>
+    <p class="muted">Last updated: October 12, 2026</p>
+    <h2>1. Scope and contact</h2>
+    <p>Hyperion Client is a Windows application for managing Minecraft: Java Edition profiles, modpacks and
+      optional online social features. The developer&#39;s published contact is Wolfiy044, wolfiy388@gmail.com.
+      Minecraft and third-party servers are separate services.</p>
+    <h2>2. Authentication and local data</h2>
+    <p>Microsoft sign-in uses the official Microsoft authentication flow. Hyperion does not request or store
+      Microsoft account passwords. It processes authentication tokens, Minecraft usernames, UUIDs, entitlement
+      and profile information to authenticate users and launch Minecraft. The Microsoft token cache is protected
+      with Windows user-bound encryption. Local profiles, settings, installed content metadata, download caches
+      and game logs are stored on the device. Logging out removes the launcher&#39;s cached authentication
+      session; it does not delete profiles or online social history. Authenticated social and protected-session
+      requests send a Minecraft access token to Hyperion's API, which validates the profile with Minecraft
+      services. This token is used for verification and is not written to the backend's account records.</p>
+    <h2>3. Online social features</h2>
+    <p>When enabled and accepted, Hyperion&#39;s backend processes account identifiers, profile/status text,
+      privacy preferences, friend requests and relationships, blocks, chat messages, groups, communities,
+      parties, invitations, shared modpack information, events, reports and appeals. Presence can include
+      Minecraft version, loader, profile and server address, subject to the user&#39;s privacy settings.
+      Messages and shared information are disclosed to their intended recipients; community content is available
+      to community participants. Authorized moderators can access reported content and moderation records.
+      Privacy controls allow invisible status, hiding the server address, blocking users and limiting requests.
+      Online requests also expose the network IP address to the receiving service.</p>
+    <h2>4. Optional protected server sessions</h2>
+    <p>Hyperion Anti-cheat runs only for a selected server session where protection is enabled or required,
+      after the consent prompt. It uses a separate native user-mode process and requests Windows administrator
+      permission. It checks the selected profile&#39;s mods, resource packs, shader packs, options and JVM
+      arguments, and the Minecraft process for loaded modules, memory/thread integrity and attempts to modify or
+      inject into that process. It does not capture screenshots or keystrokes. Relevant process/handle and
+      Windows event information is used locally for these game integrity checks. Results, finding codes and
+      flagged names, session and server identifiers, Minecraft account identity and connection information are
+      sent to Hyperion&#39;s backend; protected servers receive the session admission status and violation
+      codes. The current implementation can delete resource or shader packs in the selected profile that it
+      identifies as x-ray packs. Declining consent or administrator permission prevents the protected start.
+      Ordinary unprotected starts do not activate these checks. No custom kernel driver or persistent Windows
+      service is installed.</p>
+    <h2>5. External services and purposes</h2>
+    <p>Hyperion communicates with its API at hyperion-api.metropolia-rp.com, Microsoft/Xbox/Minecraft services,
+      Modrinth, CurseForge through its proxy, and applicable content hosts such as GitHub. Information is used
+      to provide authentication, downloads, social communication, moderation and protected-session validation.
+      Each external provider has its own privacy policy. The launcher has no advertising or payment checkout
+      functionality. The developer does not sell personal information.</p>
+    <h2>6. Storage and retention</h2>
+    <p>Local settings, profiles, caches and logs remain until cleared or removed from the device. Social profile
+      data, relationships, reports and moderation records are stored by Hyperion&#39;s backend and do not have a
+      general automatic age limit. Direct chat history is filtered to 30 days and capped at 300 messages per
+      conversation; community history is filtered to 14 days and capped at 300 messages. Removal occurs when the
+      relevant data is accessed or updated, rather than through a guaranteed immediate deletion schedule. Group
+      history and moderation/security records use record-count limits. Presence and invitations use temporary
+      state. Protected sessions expire after 12 hours and are pruned on backend access/startup; security alert
+      history is stored separately. Contact the developer to request access, correction or deletion of backend
+      data. Uninstalling the launcher alone does not delete that backend data. Third-party providers determine
+      their own retention periods.</p>
+    <h2>7. Security and choices</h2>
+    <p>HTTPS is used for remote API communication. Protected-session reports and launcher/guard communication
+      are authenticated, and session secrets are not placed in command lines. Users can sign out, change social
+      privacy settings, disable optional protection or use unprotected profiles. Required-protection servers may
+      refuse access without a valid protected session. No system can guarantee absolute security.</p>
+    <h2>8. Requests and changes</h2>
+    <p>For questions or requests concerning access, correction, deletion or objection to processing, contact
+      wolfiy388@gmail.com. Requests are assessed against the available account records and applicable
+      obligations. This notice will be updated when the application&#39;s processing changes.</p>
   </main>
   <footer>
     <p>Hyperion Client is an independent project and has nothing to do with Mojang or Microsoft.</p>

@@ -10,26 +10,75 @@
 <body>
   <header>
     <a class="brand" href="./">HYPERION <span>CLIENT</span></a>
-    <nav>
-      <a href="./">Home</a>
+    <nav aria-label="Main navigation">
+      <a href="./" aria-current="page">Home</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </nav>
   </header>
   <main class="doc">
     <h1>Hyperion Client</h1>
-    <p>Hyperion Client is a launcher for Minecraft: Java Edition on Windows. I started it because I play a lot of different
-      modpacks and wanted one place where every profile has its own game folder, its own memory settings and its own icon.</p>
-    <p>You can create a profile for any game version with Fabric, Forge, NeoForge or Quilt, install modpacks from Modrinth and
-      CurseForge, or bring instances over from other launchers like Prism, MultiMC or the Modrinth and CurseForge apps. Inside a
-      profile you can switch mods on and off, check them for updates, read the game logs and look through your screenshots.</p>
-    <p>To start the game the launcher signs you in with your Microsoft account and checks that you own Minecraft. That happens
-      through the normal Microsoft login, so your password never goes through this app.</p>
-    <p>The project is still in development and there is no public download yet.</p>
+    <p>Manage Minecraft: Java Edition profiles and modpacks, connect with friends and browse community servers
+      in one Windows launcher. Hyperion Client is free and has no in-app purchases.</p>
+    <div class="grid">
+      <article class="card">
+        <h2>Profiles and content</h2>
+        <p>Create separate game folders with their own memory settings, Java options and icons.
+          Import Modrinth and CurseForge packs or instances from other launchers. Browse mods, manage updates,
+          repair profiles, read logs and manage screenshots.</p>
+      </article>
+      <article class="card">
+        <h2>Friends and parties</h2>
+        <p>Send friend requests, chat, form parties and share invitations or modpacks.
+          Groups, community chat and scheduled game nights keep people together.</p>
+      </article>
+      <article class="card">
+        <h2>Privacy and moderation</h2>
+        <p>Control presence, hide your server address, limit requests and block users.
+          Report messages, review moderation notices and submit appeals in the launcher.</p>
+      </article>
+      <article class="card">
+        <h2>Community servers</h2>
+        <p>Browse published servers, check their status and install associated server profiles.
+          Server owners manage listings, packs and rules through the Hyperion portal.</p>
+      </article>
+      <article class="card">
+        <h2>Launcher settings</h2>
+        <p>Configure startup, the intro, closing to the tray and behavior after launching a game.
+          Profile performance tools include load timings, backups and configurable JVM tuning.</p>
+      </article>
+    </div>
+    <h2>Game starts and compatibility</h2>
+    <p>Microsoft sign-in uses official authentication and checks Minecraft ownership. Your password is entered
+      on Microsoft's page. When signed out of Hyperion, a game start opens the separately installed official
+      Minecraft Launcher with its independent account session.</p>
+    <p>The current build requires Windows 10 version 1809 or later and the .NET 8 Desktop Runtime.
+      Internet access is needed for downloads and online features. Minecraft requirements depend on the
+      selected version and modpack.</p>
+    <p>Vanilla, Fabric, Forge, NeoForge and Quilt profiles use versions supported by each loader.
+      Not every loader exists for every Minecraft version; universal compatibility is not promised.</p>
+    <h2>Protected server sessions</h2>
+    <p>Servers can set Hyperion Anti-cheat to off, optional or required. A protected session starts a separate
+      native user-mode process after consent and Windows administrator permission. It checks profile content
+      and Minecraft process integrity and reports findings to Hyperion for server admission checks.
+      No custom kernel driver or Windows service is installed.</p>
+    <p>The current implementation may delete resource or shader packs from the selected profile that it
+      identifies as x-ray packs. Declining permission or failing required checks prevents the protected start.
+      Unprotected profiles do not activate the guard. These checks do not guarantee a cheat-free server.
+      See <a href="privacy.html">Privacy</a> for the information processed.</p>
+    <h2>In-game UI is paused</h2>
+    <p>The native in-game client mod is temporarily disabled. Its controls are hidden, it is not installed
+      or included in exported modpacks, and no active loader/version support is offered for it.
+      Friends, chat and parties remain available in the launcher.</p>
+    <h2>Availability</h2>
+    <p>The project is in development. A Microsoft Store submission is being prepared, but it has not been
+      published there. No public download is currently offered here. Minecraft is a separate product;
+      a valid Java Edition license is required to play.</p>
   </main>
   <footer>
     <p>Hyperion Client is an independent project and has nothing to do with Mojang or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
-    <p>If something does not work or you have a question, write an issue on <a href="https://github.com/Wolfiy044/hyperion-client/issues">GitHub</a>.</p>
+    <p>Support: <a href="https://github.com/Wolfiy044/hyperion-client/issues">GitHub issues</a>.
+      Send private account and data requests to <a href="mailto:wolfiy388@gmail.com">wolfiy388@gmail.com</a>.</p>
   </footer>
 </body>
 </html>

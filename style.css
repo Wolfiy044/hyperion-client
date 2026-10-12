@@ -60,6 +60,7 @@ nav a:hover { color: var(--pumpkin-light); }
 }
 .card:hover { transform: translateY(-3px); border-color: var(--pumpkin); }
 .card h3 { margin: 0 0 6px; color: var(--pumpkin-light); }
+.doc .card h2 { margin: 0 0 10px; font-size: 1.25rem; }
 .card p { margin: 0; color: var(--ash); }
 
 .doc { padding: 24px 0 64px; }
@@ -71,3 +72,19 @@ nav a:hover { color: var(--pumpkin-light); }
 
 footer { border-top: 1px solid var(--line); padding: 28px 0 48px; color: var(--ash); font-size: 0.85rem; }
 footer p { margin: 4px 0; }
+
+a:focus-visible { outline: 2px solid var(--witch); outline-offset: 4px; }
+nav a[aria-current="page"] { color: var(--pumpkin-light); }
+.doc p { overflow-wrap: anywhere; }
+
+@media (max-width: 540px) {
+  header { align-items: flex-start; flex-direction: column; gap: 14px; }
+  nav { display: flex; flex-wrap: wrap; gap: 18px; }
+  nav a { margin-left: 0; }
+  .grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, nav a { transition: none; }
+  .card:hover { transform: none; }
+}

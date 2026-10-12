@@ -9,24 +9,40 @@
 <body>
   <header>
     <a class="brand" href="./">HYPERION <span>CLIENT</span></a>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="./">Home</a>
       <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
+      <a href="terms.html" aria-current="page">Terms</a>
     </nav>
   </header>
   <main class="doc">
     <h1>Terms</h1>
-    <p>By using Hyperion Client you agree to the following.</p>
+    <p class="muted">Last updated: October 12, 2026</p>
 
     <h2>You need Minecraft</h2>
-    <p>The launcher only works if you own Minecraft: Java Edition. It checks this through the Microsoft login and does not try to
-      get around that check.</p>
+    <p>Hyperion Client is free and has no in-app purchases. Minecraft is not included. A valid Minecraft:
+      Java Edition license and valid authentication are required to play. Direct starts use official Microsoft
+      authentication and ownership checks; the official-launcher path uses that launcher's independent account session.</p>
 
     <h2>Content from other people</h2>
     <p>Mods, modpacks and similar files come from authors on platforms like Modrinth and CurseForge. They have their own licenses
-      and rules, and you are responsible for following them. Files that a platform does not allow other launchers to download are
-      skipped.</p>
+      and rules. Hyperion does not grant rights to redistribute third-party content. Some files may require
+      a separate download or may be unavailable through a platform's API.</p>
+
+    <h2>Social features and server rules</h2>
+    <p>Online social features require sign-in and acceptance of the displayed community rules. Privacy controls,
+      blocking, reporting and appeals are available in the launcher. Server operators set participation rules
+      and may require a valid protected session before admitting a player.</p>
+
+    <h2>Protected sessions</h2>
+    <p>Hyperion Anti-cheat runs for a selected protected session after consent and administrator permission.
+      Declining permission or failing required checks can prevent that protected start. Unprotected profiles
+      do not activate it. The current implementation may delete identified x-ray resource or shader packs
+      from the selected profile. Review the <a href="privacy.html">privacy notice</a> before enabling protection.</p>
+
+    <h2>Development status</h2>
+    <p>Loader support depends on the selected Minecraft version. The in-game client mod is temporarily disabled.
+      The project is in development and a Microsoft Store submission is being prepared.</p>
 
     <h2>No connection to Mojang or Microsoft</h2>
     <p>This is an independent project. It is not an official Minecraft product and it is not approved by Mojang or Microsoft.
@@ -34,10 +50,12 @@
 
     <h2>No guarantees</h2>
     <p>The launcher is provided as it is. Mods can break worlds, so make a backup of anything you care about before you install
-      or update something.</p>
+      or update something or enable a protected session. Profile backups do not replace your own world backups.</p>
 
     <h2>Contact</h2>
-    <p>For questions or problems open an issue on <a href="https://github.com/Wolfiy044/hyperion-client/issues">GitHub</a>.</p>
+    <p>Use <a href="https://github.com/Wolfiy044/hyperion-client/issues">GitHub issues</a> for public bug reports.
+      Email <a href="mailto:wolfiy388@gmail.com">wolfiy388@gmail.com</a> for private account or data requests.
+      Never post passwords or access tokens in public issues.</p>
   </main>
   <footer>
     <p>Hyperion Client is an independent project and has nothing to do with Mojang or Microsoft.</p>
