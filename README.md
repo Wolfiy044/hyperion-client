@@ -23,4 +23,4 @@ static HTTP server, for example `python -m http.server 8080`, then open localhos
 GitHub Pages publishes the root directory of `main`.
 
 Use GitHub issues for public bug reports. Send account and privacy requests to
-wolfiy388@gmail.com; do not post credentials or private account details in issues.
+nicklinke.12434@gmail.com; do not post credentials or private account details in issues.
